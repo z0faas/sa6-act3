@@ -2,8 +2,13 @@
 Finding the sum of all the digits in an inputted number while also using lambda
 '''
 
-num = int(input("Enter a number. I'll tell you the sum of its digits. "))
+test_cases = {
+    "Test Case 1": 123,
+    "Test Case 2": 200,
+    "Test Case 3": 1110
+}
 
-digits_sum = sum(map(lambda x: int(x), str(num)))  # using lambda inside map to convert each digit to int, then adding them
-
-print(f"The sum of the digits in your number is {digits_sum}")
+for case, num in test_cases.items():
+    digits_sum = sum(map(lambda x: int(x), str(num)))  # using lambda inside map to convert each digit to int, then adding them
+    print(f"{case}\n-----------")
+    print(f"The sum of the digits in {num} is {digits_sum}\n")

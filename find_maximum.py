@@ -14,17 +14,13 @@ def get_maximum(num_list, greater_num):
   
     return result
 
-greater_num = lambda x, y: x if x > y else y # lambda function to compare 2 numbers and return the greater number
+test_cases = {
+    "Test Case 1": [1, 2, 8, 4, 5],
+    "Test Case 2": [1, 2, 3, 4, 5],
+    "Test Case 3": [100, 12, 22, 1, 3, 101, 2]
+}
 
-# Test Case 1
-print('Test Case 1 \n -----------')
-num_list = [1, 2, 8, 4, 5] 
-print(f"The maximum number in {num_list} is {get_maximum(num_list, greater_num)}\n")
-
-print('Test Case 2 \n -----------')
-num_list = [1, 2, 3, 4, 5] 
-print(f"The maximum number in {num_list} is {get_maximum(num_list, greater_num)}\n")
-
-print('Test Case 3 \n -----------')
-num_list = [100, 12, 22, 1, 3, 101, 2] 
-print(f"The maximum number in {num_list} is {get_maximum(num_list, greater_num)}\n")
+for case, num_list in test_cases.items():
+    greater_num = lambda x, y: x if x > y else y # lambda function to compare 2 numbers and return the greater number
+    print(f"{case}\n-----------")
+    print(f"The maximum number in {num_list} is {get_maximum(num_list, greater_num)}\n")
